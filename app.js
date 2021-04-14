@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const logger = require('morgan');
 
-const Routermain = require('./server/routes/main');
+const Routermain = require('./server/routes/productRoutes');
 
 // set up express app
 const app = express();
