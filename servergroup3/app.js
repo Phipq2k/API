@@ -15,6 +15,7 @@ mongoose.connect('mongodb+srv://tranquocphi:conga2020@cluster0.k5hqw.mongodb.net
 
 //import Routes
 const productRoutes = require('./mvc/routes/product')
+const userRoutes = require('./mvc/routes/user')
 
 const app = express()
 
@@ -30,6 +31,7 @@ app.get('/', (req, res, next) => {
     })
 })
 app.use('/product', productRoutes)
+app.use('/user', userRoutes)
 
 
 
