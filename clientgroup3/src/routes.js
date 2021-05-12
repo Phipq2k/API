@@ -19,8 +19,8 @@ export const routes = [{
         component: Contact
     },
     {
-        path: '/admin',
-        name: 'adminpage',
+        path: '/profile',
+        name: 'profilepage',
         component: User
     },
     {

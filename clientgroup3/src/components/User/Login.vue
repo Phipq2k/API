@@ -10,11 +10,12 @@
       <ul>
         <li>Ví dụ về sự kiện điều hướng đến trang chủ: </li>
         <button class="btn btn-danger" @click="handledemo2">Quay lại trang chủ</button>
-        <li>Ví dụ về sự kiện điều hướng đến trang admin: </li>
-        <button class="btn btn-warning" @click="handledemo3">Chuyển đến trang admin</button>
+        <li>Ví dụ về sự kiện điều hướng đến trang profile: </li>
+        <button class="btn btn-warning" @click="handledemo3">Chuyển đến trang profile</button>
       </ul>
     
   </div>
+  
 </template>
 
 <script>
@@ -28,7 +29,7 @@ export default {
       //console.log('back to home');
     },
     handledemo3() {
-      this.$router.push('/admin')
+      this.$router.push('/profile')
       //console.log('back to home');
     }
   }
