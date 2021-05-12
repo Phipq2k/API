@@ -1,8 +1,8 @@
-import Home from './components/Home'
-import Login from './components/User/Login'
-import Contact from './components/Contact'
-import User from './components/User/User'
-import Registration from './components/User/Registration'
+import Home from './views/Home'
+import Login from './views/User/Login'
+import Contact from './views/Contact'
+import User from './views/User/User'
+import Registration from './views/User/Registration'
 export const routes = [{
         path: '/',
         name: 'homepage',

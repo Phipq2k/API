@@ -12,4 +12,8 @@ userrouter.route('/:userID')
     .patch(userController.updateUser)
     .delete(userController.deleteUserById)
 
+userrouter.route('/:userID/decks')
+    .get(userController.getUserDecks)
+    .post(userController.newUserDeck)
+
 module.exports = userrouter

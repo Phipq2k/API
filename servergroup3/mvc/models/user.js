@@ -5,10 +5,13 @@ const userSchema = new Schema({
         userAvatar: {
             type: Number
         },
-        userName: {
+        firstName: {
             trim: true,
             type: String,
             required: true
+        },
+        lastName: {
+            type: String
         },
         userAge: {
             type: Number
@@ -22,7 +25,11 @@ const userSchema = new Schema({
         userPassword: {
             type: String,
             required: true
-        }
+        },
+        decks: [{
+            type: Schema.Types.ObjectId,
+            ref: 'Deck'
+        }]
     }, {
         timestamps: true
     }

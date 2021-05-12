@@ -1,2 +1,6 @@
 # API
-This repository contain documents about client and server 
+# Project setup
+npm install
+# Run project
+npm run dev
+
