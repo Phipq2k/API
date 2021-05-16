@@ -1,3 +1,6 @@
 Hiện giờ chưa set up xong server, mọi người cố gắng đợi 1 ngày.
 ----Tran-Quoc-Phi
 Đây là file trao đổi, ai có thắc mắc hay cần gì từ server thì báo cáo tại file này, cảm ơn.
+
+Ngay 17/5/2021
+Bi loi phan JWT cap nhat password, con phan do nua la xong roi

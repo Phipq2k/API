@@ -8,7 +8,8 @@ const logger = require('morgan')
 //connect Mongodb by mongoose
 mongoose.connect('mongodb+srv://tranquocphi:conga2020@cluster0.k5hqw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
         useUnifiedTopology: true,
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useCreateIndex: true
     })
     .then(() => console.log('Connected database is successfully from mongodb'))
     .catch((error) => console.log(`Connect database is failed with error which is ${error}`))
@@ -16,6 +17,7 @@ mongoose.connect('mongodb+srv://tranquocphi:conga2020@cluster0.k5hqw.mongodb.net
 //import Routes
 const productRoutes = require('./mvc/routes/product')
 const userRoutes = require('./mvc/routes/user')
+const deckRoutes = require('./mvc/routes/deck')
 
 const app = express()
 
@@ -32,6 +34,7 @@ app.get('/', (req, res, next) => {
 })
 app.use('/product', productRoutes)
 app.use('/user', userRoutes)
+app.use('/deck', deckRoutes)
 
 
 

@@ -2,18 +2,15 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-        userAvatar: {
-            type: Number
-        },
         firstName: {
             trim: true,
             type: String,
-            required: true
+            required: true,
         },
         lastName: {
             type: String
         },
-        userAge: {
+        userDateOfBirth: {
             type: Number
         },
         userEmail: {
@@ -22,15 +19,24 @@ const userSchema = new Schema({
             lowercase: true,
             unique: true
         },
+        accommodation: {
+            type: String,
+            default: ''
+        },
         userPassword: {
             type: String,
-            required: true
+            required: true,
+            default: ''
         },
         decks: [{
             type: Schema.Types.ObjectId,
             ref: 'Deck'
         }]
     }, {
+        collection: 'users'
+    },
+
+    {
         timestamps: true
     }
 
