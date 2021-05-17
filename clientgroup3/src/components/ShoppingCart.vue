@@ -8,7 +8,7 @@
     </div>
     <div v-else class="shopping-cart-items">
       <ul>
-        <li v-for="product in products" class="cart-product-card">
+        <li v-for="product in products" :key="product.idproduct" class="cart-product-card">
           <img :src="product.img" :alt="`Image of ${product.title}`">
           <span class="product-title">{{product.title}}</span>
           <span class="product-price"> {{product.price | currency}}</span>

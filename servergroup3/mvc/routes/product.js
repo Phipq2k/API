@@ -1,6 +1,6 @@
-const express = require('express')
 const productrouter = require('express-promise-router')()
 const productController = require('../controllers/product')
+const { ValidateBody, ValidateParams, schema } = require('../helpers/validatehelpers')
 
 productrouter.route('/')
     .get(productController.getProduct)
