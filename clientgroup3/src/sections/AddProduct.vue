@@ -22,19 +22,19 @@
 						<span>Subcategory</span>
 						<select class="form-right" name="" v-model="product.subcategory">
 							<option disabled value="">Choose One</option>
-							<option v-for="sub in getSubCategoryTypes(category)" :value="sub">{{sub}}</option>
+							<option v-for="(sub, index) in getSubCategoryTypes(category)" :value="sub" :key="index">{{sub}}</option>
 						</select>
 					</div>
 					<div class="form-item">
 						<span>Sale</span>
 						<div class="form-right sale-input" >
-							<input class="radio"type="radio" name="sale" value="true" v-model="product.sale" :checked="product.sale">True
+							<input class="radio" type="radio" name="sale" value="true" v-model="product.sale" :checked="product.sale">True
 							<input class="radio" type="radio" name="sale" value="false" v-model="product.sale" :checked="!product.sale">False
 						</div>
 					</div>
 					<div class="form-item">
 						<span>Inventory</span>
-						<input class="form-right"type="number" name="" v-model="product.inventory">
+						<input class="form-right" type="number" name="" v-model="product.inventory">
 					</div>
 					<div class="form-item">
 						<span>Description</span>
