@@ -1,25 +1,32 @@
 <template>
-  <div>
-    <Header/>
-    <Main/>
+  <div id="app">
+    <TopNavigation/>
+    <div class="banner" v-if="bannerLink !== ''">
+      <img :src="bannerLink">
+    </div>
+    <div class="content-wrapper">
+      <router-view/>
+    </div>
     <Footer/>
   </div>
 </template>
 
 <script>
-import Header from './views/layouts/Header'
-import Main from './views/layouts/Main'
-import Footer from './views/layouts/Footer'
+import TopNavigation from '@/components/TopNavigation'
+import Footer from '@/components/Footer'
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'App',
   components: {
-    Header,
-    Main,
-    Footer
+    Footer,
+    TopNavigation
+  },
+  computed: {
+    ...mapGetters({
+      bannerLink: 'getBannerLink'
+    })
   }
 }
 </script>
-
-<style>
-
-</style>
+<style> @import './assets/styles.css'; </style>
