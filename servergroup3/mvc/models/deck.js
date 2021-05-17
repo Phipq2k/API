@@ -8,9 +8,9 @@ const deckSchema = new Schema({
     description: {
         type: String
     },
-    total: {
-        type: Number,
-        default: 0
+    position: {
+        type: String,
+        default: ''
     },
     owner: {
         type: Schema.Types.ObjectId,
