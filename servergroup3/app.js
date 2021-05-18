@@ -24,6 +24,10 @@ const app = express()
 //Middleware
 app.use(logger('dev'))
 app.use(bodyParser.json())
+app.use(express.static('public'))
+app.use(express.static('files'))
+app.use(express.static('folder_name'))
+
 
 
 //Routes
