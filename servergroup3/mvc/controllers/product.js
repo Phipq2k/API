@@ -8,13 +8,31 @@ const productModel = require('../models/product')
 
 //Async/await
 const getProduct = async(req, res, next) => {
-
     const product = await productModel.find({})
     return res.status(201).json({ product })
 }
 
+
+const uploadImage = async(req, res, next) => {
+    const imgFile = req.file.filename
+    console.log('name: ', imgFile);
+    await new productModel({ img: imgFile }).save()
+    return res.status(201).send('upload successfull')
+
+}
+
 const newProduct = async(req, res, next) => {
-    const newproduct = new productModel(req.body)
+    const newproduct = new productModel({
+        id: req.body.id,
+        title: req.body.title,
+        price: req.body.price,
+        category: req.body.category,
+        subcategory: req.body.subcategory,
+        sale: req.body.sale,
+        img: req.file.filename,
+        inventory: req.body.inventory,
+        description: req.body.description
+    })
     await newproduct.save()
     return res.status(200).json({ product: newproduct })
 
@@ -32,7 +50,17 @@ const getOneProduct = async(req, res, next) => {
 const replaceProduct = async(req, res, next) => {
     //enforce new product to old product
     const { productID } = req.params
-    const newProduct = req.body
+    const newProduct = {
+        id: req.body.id,
+        title: req.body.title,
+        price: req.body.price,
+        category: req.body.category,
+        subcategory: req.body.subcategory,
+        sale: req.body.sale,
+        img: req.file.filename,
+        inventory: req.body.inventory,
+        description: req.body.description
+    }
     const result = await productModel.findByIdAndUpdate(productID, newProduct)
     return res.status(201).json({ success: true })
 
@@ -41,7 +69,17 @@ const replaceProduct = async(req, res, next) => {
 const updateProduct = async(req, res, next) => {
     //number of fields
     const { productID } = req.params
-    const newProduct = req.body
+    const newProduct = {
+        id: req.body.id,
+        title: req.body.title,
+        price: req.body.price,
+        category: req.body.category,
+        subcategory: req.body.subcategory,
+        sale: req.body.sale,
+        img: req.file.filename,
+        inventory: req.body.inventory,
+        description: req.body.description
+    }
     const result = await productModel.findByIdAndUpdate(productID, newProduct)
     return res.status(201).json({ success: true })
 }
@@ -59,5 +97,6 @@ module.exports = {
     getOneProduct,
     replaceProduct,
     updateProduct,
-    deleteProductById
+    deleteProductById,
+    uploadImage
 }

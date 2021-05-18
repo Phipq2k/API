@@ -6,7 +6,7 @@
     <div class="product-list-wrap admin">
 			<div class="search-bar">
 				<div class="search-input">
-					<input type="text" name="" placeholder="title" @click="search" v-model="searchTitle">
+					<input type="text" name="" placeholder="title" @click="search" v-model:value="searchTitle">
 					<button class="search" @click="search">Search</button>
 				</div>
 				<img src="../assets/add.png" alt="add" @click="openAddDialog">
@@ -170,6 +170,9 @@ export default {
 				color: white;
 			}
 
+			.search:hover {
+
+			}
 		}
 
 		img {

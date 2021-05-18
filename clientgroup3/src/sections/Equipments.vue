@@ -18,7 +18,7 @@ import Sidebar from '@/components/Sidebar'
 
 export default {
   name: 'index',
-  bannerLink: '../static/images/banner.webp',
+  bannerLink: '../static/images/equipmentBanner.jpg',
   components: {
     ProductList,
     Sidebar

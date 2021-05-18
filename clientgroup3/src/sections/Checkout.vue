@@ -9,7 +9,7 @@
 					<span>Quantity</span>
 					<span>Operate</span>
 				</li>
-				<li class="cart-item" v-for="(item, index) in products" :date-key="item.id" :key="index">
+				<li class="cart-item" v-for="item in products" :date-key="item.id">
 					<img :src="item.img" alt="img of product">
 					<span>{{item.title}}</span>
 					<span>{{item.price | currency}}</span>

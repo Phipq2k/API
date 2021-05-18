@@ -11,9 +11,6 @@ userrouter.route('/:userID')
     .patch(ValidateBody(schema.userSchema), ValidateParams(schema.idSchema, 'userID'), userController.updateUser)
     .delete(ValidateParams(schema.idSchema, 'userID'), userController.deleteUserById)
 
-userrouter.route('/:userID/decks')
-    .get(ValidateParams(schema.idSchema, 'userID'), userController.getUserDecks)
-    .post(ValidateParams(schema.idSchema, 'userID'), userController.newUserDeck)
 
 userrouter.route('/register').post(ValidateBody(schema.userSchema), userController.newUser)
 
