@@ -1,6 +1,6 @@
 <template>
   <footer>
-  Created by <a href="mailto:moujibsolaiman@gmail.com?Subject=Hello%20again">Moujib Solaiman</a> for the studies final project. You can visit the school website at <a href="http://www.iepscf-uccle.be">IEPSCF-UCCLE</a>
+  Được tạo bởi <a href="https://www.facebook.com/Quocphisky">Group 3</a> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, itaque amet veniam aut unde tempora fugit quasi consequuntur recusandae atque minima repellendus vitae mollitia cumque reprehenderit. Minima facilis modi nisi?
 </footer>
 </template>
 
