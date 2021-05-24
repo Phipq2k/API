@@ -1,6 +1,6 @@
 <template>
   <footer>
-  Được tạo bởi <a href="https://www.facebook.com/Quocphisky">Group 3</a> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, itaque amet veniam aut unde tempora fugit quasi consequuntur recusandae atque minima repellendus vitae mollitia cumque reprehenderit. Minima facilis modi nisi?
+  Được tạo bởi Group 3, <a href="https://www.facebook.com/Quocphisky">Link fb Robert Phi</a> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, itaque amet veniam aut unde tempora fugit quasi consequuntur recusandae atque minima repellendus vitae mollitia cumque reprehenderit. Minima facilis modi nisi?
 </footer>
 </template>
 
