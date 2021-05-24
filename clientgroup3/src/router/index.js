@@ -14,58 +14,56 @@ import Checkout from '@/sections/Checkout'
 
 
 Vue.use(Router)
-
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    },
-    {
-      path: '/cart',
-      name: 'cart',
-      component: cart
-    },
-    {
-      path: '/menApparel',
-      name: 'menApparel',
-      component: MenApparel
-    },
-    {
-      path: '/womenApparel',
-      name: 'womenApparel',
-      component: WomenApparel
-    },
-    {
-      path: '/supplements',
-      name: 'supplements',
-      component: Supplements
-    },
-    {
-      path: '/equipments',
-      name: 'equipments',
-      component: Equipments
-    },
-    {
-      path: '/production',
-      name: 'production',
-      component: Production
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/admin',
-      name: 'admin',
-      component: Admin
-    },
-    {
-      path: '/checkout',
-      name: 'checkout',
-      component: Checkout
-    }
-  ]
+    routes: [{
+            path: '/',
+            name: 'index',
+            component: index
+        },
+        {
+            path: '/cart',
+            name: 'cart',
+            component: cart
+        },
+        {
+            path: '/menApparel',
+            name: 'menApparel',
+            component: MenApparel
+        },
+        {
+            path: '/womenApparel',
+            name: 'womenApparel',
+            component: WomenApparel
+        },
+        {
+            path: '/supplements',
+            name: 'supplements',
+            component: Supplements
+        },
+        {
+            path: '/equipments',
+            name: 'equipments',
+            component: Equipments
+        },
+        {
+            path: '/production',
+            name: 'production',
+            component: Production
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
+        },
+        {
+            path: '/admin',
+            name: 'admin',
+            component: Admin
+        },
+        {
+            path: '/checkout',
+            name: 'checkout',
+            component: Checkout
+        }
+    ]
 })

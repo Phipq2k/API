@@ -10,7 +10,7 @@
 					<span>Operate</span>
 				</li>
 				<li class="cart-item" v-for="item in products" :date-key="item.id">
-					<img :src="item.img" alt="img of product">
+					<img :src="item.img ? 'http://localhost:3000/imgupload/' + item.img : 'https://place-hold.it/250'" alt="img of product">
 					<span>{{item.title}}</span>
 					<span>{{item.price | currency}}</span>
 					<span class="quantity">

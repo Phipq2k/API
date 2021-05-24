@@ -14,7 +14,7 @@
 			<div class="products">
 				<transition-group name="card" tag="ul">
 	        <li v-for="product in products" :key="product.id" :data-key="product.id" class="product-card"  tabindex="0">
-	          <img class="product-img" :src="product.img" :alt="`image of ${product.title}`">
+	          <img :src="product.img ? 'http://localhost:3000/imgupload/' + product.img : 'https://place-hold.it/250'" :alt="`Image of ${product.title}`">
 	          <span class="product-title">{{product.title}}</span>
 	          <span class="product-price"> {{product.price | currency}}</span>
 						<div class="button-master">

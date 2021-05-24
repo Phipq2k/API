@@ -77,12 +77,6 @@ const schema = {
     userChangePassword: Joi.object().keys({
         userPassword: Joi.string().min(6).max(24).regex(/^[0-9a-zA-Z]+$/).required()
     }),
-    deckSchema: Joi.object().keys({
-        name: Joi.string().max(255).required(),
-        description: Joi.string().max(255),
-        position: Joi.string().max(255).required()
-
-    }),
     newdeckSchema: Joi.object().keys({
         name: Joi.string().max(255).required(),
         description: Joi.string().max(255),

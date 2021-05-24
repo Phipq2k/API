@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
+const cors = require('cors')
 
 
 
@@ -17,7 +18,6 @@ mongoose.connect('mongodb+srv://tranquocphi:conga2020@cluster0.k5hqw.mongodb.net
 //import Routes
 const productRoutes = require('./mvc/routes/product')
 const userRoutes = require('./mvc/routes/user')
-const deckRoutes = require('./mvc/routes/deck')
 
 const app = express()
 
@@ -25,8 +25,7 @@ const app = express()
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(express.static('public'))
-app.use(express.static('files'))
-app.use(express.static('folder_name'))
+app.use(cors())
 
 
 
@@ -38,7 +37,6 @@ app.get('/', (req, res, next) => {
 })
 app.use('/product', productRoutes)
 app.use('/user', userRoutes)
-app.use('/deck', deckRoutes)
 
 
 

@@ -1,7 +1,7 @@
 <template>
 	<div class="production">
 		<div class="prod--left">
-			<img :src="product.img" :alt="`image of ${product.title}`">
+			 <img :src="product.img ? 'http://localhost:3000/imgupload/' + product.img : 'https://place-hold.it/250'" :alt="`Image of ${product.title}`">
 		</div>
 		<div class="prod--right">
 			<p class="prod--right_title">{{product.title}}</p>

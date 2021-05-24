@@ -6,7 +6,6 @@
  */
 
 
-const Deck = require('../models/deck')
 const userModel = require('../models/user')
 const jwt = require('jsonwebtoken')
 const JWT_SECRET = 'shdsahdh#3$#2@jkdhjdhsdhjsjkahdhh%%%%'
